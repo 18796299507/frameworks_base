@@ -1197,6 +1197,17 @@ public class DeviceIdleController extends SystemService
         @Override public boolean isPowerSaveWhitelistExceptIdleApp(String name) {
             return isPowerSaveWhitelistExceptIdleAppInternal(name);
         }
+/*111*/
+        @Override public int getIdleStateDetailed() {
+            getContext().enforceCallingOrSelfPermission(android.Manifest.permission.DEVICE_POWER,
+                    null);
+            return mState;
+        }
+        @Override public int getLightIdleStateDetailed() {
+            getContext().enforceCallingOrSelfPermission(android.Manifest.permission.DEVICE_POWER,
+                    null);
+            return mLightState;
+        }
 
         @Override public boolean isPowerSaveWhitelistApp(String name) {
             return isPowerSaveWhitelistAppInternal(name);
