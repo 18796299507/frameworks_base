@@ -28,7 +28,6 @@ import android.graphics.Rect;
 public class ClipRectAnimation extends Animation {
     protected Rect mFromRect = new Rect();
     protected Rect mToRect = new Rect();
-
     /**
      * Constructor to use when building a ClipRectAnimation from code
      *
